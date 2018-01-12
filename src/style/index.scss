@@ -1,0 +1,169 @@
+$white: #FFFFFF;
+$green: #7AB55C;
+$grey: #7B7B7B;
+$purplelight: #5c6ac4;
+$purpledark: #000639;
+$red: #C23628;
+
+* {
+	font-family: 'Helvetica', sans-serif;
+}
+
+html, body {
+	height:100%;
+	width:100%;
+	margin: 0;
+	min-height: 600px;
+}
+
+body {
+	background: $purpledark;
+}
+
+h1 {
+	text-align: center;
+}
+
+#root {
+	height: 100%;
+	width: 100%;
+}
+
+@media(max-width: 600px){
+	.index {
+		padding: 50px 50px!important;
+	}
+}
+
+@media(max-width: 650px) {
+	form .input {
+		flex-direction: column!important;
+	}
+	form .input .emailValidator, form .input .interest {
+		margin-left: 0!important;
+		margin-right: 0!important;
+	}
+	form .input .interest {
+		margin-top: 10px!important;
+	}
+	form input[type="submit"] {
+		margin-top: 30px!important;
+	}
+}
+
+.index {
+	height:100%;
+	width: 100%;
+	padding: 50px 150px;
+	box-sizing: border-box;
+	position: relative;
+	margin: 0 auto;
+	max-width: 900px;
+
+	h1 {
+		color: white;
+		font-size: 24px;
+		text-align: left;
+		max-width: 500px
+	}
+
+	.dash {
+		height: 2px;
+		width: 25px;
+		background-color: $green;
+	}
+
+	h2 {
+		color: $white;
+		font-size: 16px;
+		margin-top: 50px;
+		margin-bottom: 20px;
+		font-weight: 300;
+	}
+
+	form {
+		width: 100%;
+	}
+
+	.input {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	form input, form select {
+		padding: 15px;
+		border: none;
+		border-radius: 5px;
+		max-height: 45.5px
+	}
+
+	form input:focus, form select:focus {
+		outline: none;
+	}
+
+	.emailValidator {
+		flex-grow: 2;
+		margin-right: 5px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.emailValidator p {
+		color: $red;
+		font-size: 12px;
+		font-weight: 700;
+		visibility: hidden;
+		margin: 0;
+		margin-top: 5px
+	}
+
+	.emailValidator .wrong {
+		visibility: visible
+	}
+
+	.interest {
+		flex-grow: 1;
+		margin-left: 5px;
+	}
+
+	.default {
+		color: $grey;
+	}
+
+	.interest option {
+		color: black;
+	}
+
+	.placeholder {
+		color: $grey;
+	}
+
+	form input[type="submit"] {
+		width: 100%;
+		margin-top: 20px;
+		color: white;
+		background-color: $purplelight;
+	}
+
+	form input[type="submit"]:hover {
+		cursor: pointer;
+	}
+
+	.unsub {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-bottom: 30px;
+	}
+
+	.unsub:visited {
+		color: $white;
+	}
+	
+	.unsub:active {
+		color: $purplelight;
+	}
+}
